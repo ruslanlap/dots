@@ -23,9 +23,7 @@ sudo apt install zsh --quiet
 
 # Install Oh My Zsh
 # https://ohmyz.sh/#install
-if ! [ -d ~/.oh-my-zsh ]; then
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-fi
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install zsh-autosuggestions
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
@@ -50,12 +48,16 @@ git clone https://github.com/Pilaton/OhMyZsh-full-autoupdate.git ${ZSH_CUSTOM:-~
 # Install fzf
 # https://github.com/junegunn/fzf#using-homebrew
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --quiet
+~/.fzf/install
 
 # Install bat
 # https://github.com/sharkdp/bat#on-macos-or-linux-via-homebrew
 sudo apt install bat --quiet
 
+
+curl -O https://raw.githubusercontent.com/ruslanlap/dotfiles/master/.p10k.zsh
+
+chsh -s $(which zsh)
 
 
 log "Done. Please restart your shell."
