@@ -22,9 +22,10 @@ log "Running run_once_install-packages.sh once..."
 sudo apt install zsh --quiet
 
 # Install Oh My Zsh
-# https://ohmyz.sh/#install
-#sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --quiet
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+# https://ohmyz.sh/#instal
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --quiet
+
 # Install zsh-autosuggestions
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 2>/dev/null
@@ -60,4 +61,4 @@ chsh -s $(which zsh)
 
 
 log "Done. Please restart your shell."
-exec sh
+zsh
