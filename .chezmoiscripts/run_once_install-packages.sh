@@ -60,4 +60,4 @@ chsh -s $(which zsh)
 
 
 log "Done. Please restart your shell."
-zsh
+exec sh
